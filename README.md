@@ -2,7 +2,7 @@
 
 ## Installation
 ### Requirements
-* Ruby 2.5.3 (Install with rbenv)
+* Ruby 2.6.2 (Install with rbenv)
 * Node 
 - `brew install node`
 * Postgresql 11
