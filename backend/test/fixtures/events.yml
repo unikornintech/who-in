@@ -1,0 +1,51 @@
+# == Schema Information
+#
+# Table name: events
+#
+#  id            :bigint(8)        not null, primary key
+#  user_id       :bigint(8)
+#  title         :string
+#  description   :text
+#  start_time    :datetime
+#  expiration    :datetime
+#  latitude      :decimal(, )
+#  longitude     :decimal(, )
+#  public        :boolean
+#  max_attendees :integer
+#  min_attendees :integer
+#  price         :decimal(, )
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  time: 2019-03-23 13:50:05
+  latitude: 9.99
+  longitude: 9.99
+  public: false
+  attendees: 1
+  max_attendees: 1
+  min_attendees: 1
+  num_attendees: 1
+  expiration: 2019-03-23 13:50:05
+  category: MyString
+  price: 1.5
+
+two:
+  title: MyString
+  description: MyString
+  time: 2019-03-23 13:50:05
+  latitude: 9.99
+  longitude: 9.99
+  public: false
+  attendees: 1
+  max_attendees: 1
+  min_attendees: 1
+  num_attendees: 1
+  expiration: 2019-03-23 13:50:05
+  category: MyString
+  price: 1.5

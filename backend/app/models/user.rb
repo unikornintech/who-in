@@ -23,6 +23,8 @@ class User < ApplicationRecord
             length: { minimum: 6 },
             if: -> { new_record? || !password.nil? }
 
+  has_many :events
+
   def display_name
     "#{first_name} #{last_name[0]}."
   end
