@@ -3,25 +3,27 @@ import { connect } from 'react-redux';
 
 import logo from './logo.svg';
 import './App.css';
+import AppBar from './AppBar';
+import { Box, Grommet, Button } from 'grommet';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div>
+        <header>
+          <AppBar>
+            <Box>Title</Box>
+            <Box direction='row'>
+              <Button>Features</Button>
+              <Button>Enterprise</Button>
+              <Button>Support</Button>
+              <Button color='primary' variant='outlined'>
+                Login
+              </Button>
+            </Box>
+          </AppBar>
         </header>
+        <main>Body</main>
       </div>
     );
   }
