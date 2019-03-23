@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authorize_request, except: :index
+  before_action :authorize_request, except: %i[index, show]
 
   def index
     @events = Event.all
@@ -33,8 +33,8 @@ class EventsController < ApplicationController
 
   def find_event
     @event = Event.find!(params[:_id])
-    rescue ActiveRecord::RecordNotFound
-      render json: { errors: 'Event not found' }, status: :not_found
+  rescue ActiveRecord::RecordNotFound
+    render json: { errors: 'Event not found' }, status: :not_found
   end
 
   def event_params
