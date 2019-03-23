@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authorize_request, except: :create
-  before_action :find_user, except: i%[create, index]
+  before_action :find_user, except: %i[create, index]
 
   def index
     @users = User.all
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   private
 
   def find_user
-    @user = User.find(params[:id])
+    @user = User.find_by_email(params[:email])
   rescue ActiveRecord::RecordNotFound
     render json: { errors: "User not found" }, status: :not_found
   end
