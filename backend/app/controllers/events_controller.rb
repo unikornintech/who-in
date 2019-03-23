@@ -11,9 +11,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
+    @event = @current_user.events.build(event_params)
     if @event.save
-      render json: @user, status: :created
+      render json: @event, status: :created
     else
       render json: { errors: @event.errors.full_messages }, status: :unprocessable_entity
     end
