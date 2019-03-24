@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import { Box, Button } from 'grommet';
 
-import './App.css';
+import './styles/App.scss';
 import AppBar from './AppBar';
 import Homepage from './components/homepage';
 import Login from './components/login';
