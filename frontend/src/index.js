@@ -4,6 +4,7 @@ import { Grommet } from 'grommet';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 
+import initialState from './reducers/initialState';
 import configureStore, { history } from './store/store';
 import './index.css';
 import App from './App';
@@ -21,7 +22,7 @@ const theme = {
 };
 
 ReactDOM.render(
-  <Provider store={configureStore()}>
+  <Provider store={configureStore(initialState)}>
     <ConnectedRouter history={history}>
       <Grommet theme={theme}>
         <App />
