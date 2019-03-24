@@ -7,10 +7,11 @@ import rootReducer from '../reducers/rootReducer';
 export const history = createBrowserHistory();
 
 const configureStore = (initialState = {}) => {
+  const middleWares = [thunk, routerMiddleware(history)];
   return createStore(
     rootReducer(history),
     initialState,
-    compose(applyMiddleware(thunk, routerMiddleware(history)))
+    compose(applyMiddleware(...middleWares))
   );
 };
 
