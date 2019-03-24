@@ -7,6 +7,8 @@ import './App.css';
 import AppBar from './AppBar';
 import Homepage from './components/homepage';
 
+import NewEvent from './NewEvent/NewEvent';
+
 const App = () => (
   <Router>
     <div>
@@ -26,6 +28,7 @@ const App = () => (
 
       <main>
         <Route exact path="/" component={Homepage} />
+        <Route exact path="/newEvent" render={() => <NewEvent />} />
         {/* <Route render={() => (<div>Miss</div>)} /> */}
         {/* <Route exact path="/about-us" component={About} /> */}
       </main>
